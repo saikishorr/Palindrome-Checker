@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("./images/pexels-markusspiske-177598.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    color: #ffffff;
+    background-size: cover; 
+    background-position: center;
+    /* height: 100vh;   */
+}
+
+
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);      /* This applies the blur effect */
+    z-index: -1;             /* Ensures the blur is behind the content */
+    opacity: 5;            /* Optional: To add some transparency */
+}
+
+.container {
+    min-height: 100vh;
+    padding: 1.5rem clamp(1rem, 5%, 3rem);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-wrapper {
+    padding: 1.5rem clamp(1rem, 5%, 3rem);
+    max-inline-size: 600px;
+    background: #2a4d69;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px)
+}
+
+.title {
+    text-align: center;
+    padding: 10px 0;
+    font-size: clamp(1rem, 0.6522rem + 1.7391vw, 2rem);
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+
+label {
+    color: #0a0a23;
+    margin-bottom: 20px;
+}
+
+.palindrome-btn {
+    border: none;
+    padding:  10px;
+    background-color: #63ace5;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.palindrome-input {
+    height: 38px;
+    margin: 10px 0px;
+    border: none;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.button-input-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.palindrome-input:focus {
+    border-bottom: 3px solid black;
+}
+
+.palindrome-input::placeholder {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.palindrome-input {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.results-div {
+    display: grid;
+    place-content: center;
+    margin: 10px 0px;
+    background-color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    overflow-y: auto;
+    word-wrap: break-word;
+    min-height: 50px;
+    color: black;
+}
+
+.hidden {
+    display: none;
+    color: black;
+}
+
+
+
+
+.error {
+    color: red;
+}
+
+.palindrome-definition-div {
+    font-size: clamp(1rem, 0.8261rem + 0.8696vw, 1.5rem);
+    min-height: 140px;
+    background-color: #e7eff6;
+    margin-top: 20px;
+    color: black;
+    padding: 0.7rem clamp(0.5rem, 5%, 3rem);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.palindrome-definition {
+    vertical-align: middle;
+    text-align: center;
+}
